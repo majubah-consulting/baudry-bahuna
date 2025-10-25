@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Baudry BAHUNA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* Profile */
+        .profile {
+            font-size: 1.05em;
+            line-height: 1.8;
+            text-align: justify;
+            color: #555;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company {
+            color: #3498db;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        .period {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+
+        .experience-description {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .experience-description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .experience-description li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        /* Education & Certifications */
+        .education-item, .cert-item {
+            margin-bottom: 18px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+
+        .education-item h3, .cert-item h3 {
+            color: #2c3e50;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+
+        .education-item .institution, .cert-item .institution {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .education-item .date, .cert-item .date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            border-top: 3px solid #3498db;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▪ ";
+            color: #3498db;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .language-level {
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .experience-header {
+                flex-direction: column;
+            }
+            .period {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Baudry BAHUNA</h1>
+            <div class="title">Formateur Professionnel | Expert en Entrepreneuriat & Management</div>
+            <div class="contact-info">
+                <span>📍 Normandie, France</span>
+                <span>📧 baudry@majubahconsulting.com</span>
+                <span>💼 LinkedIn</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            
+            <!-- Profile -->
+            <section class="section">
+                <h2 class="section-title">Profil</h2>
+                <div class="profile">
+                    Formateur professionnel passionné par la transmission et l'entrepreneuriat, j'accompagne depuis 2023 
+                    des étudiants en écoles de commerce et des professionnels en reconversion. Fort d'un parcours 
+                    entrepreneurial de 9 ans dans le secteur du courtage en financement et de 6 années d'expérience 
+                    bancaire, j'apporte une expertise terrain concrète à mes enseignements. Titulaire d'un organisme 
+                    de formation certifié Qualiopi, je suis spécialisé dans la formation de formateurs et l'accompagnement 
+                    à la création d'entreprise.
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Formateur Professionnel & Président de Jury</div>
+                            <div class="company">E2SE Business School & MBWAY</div>
+                        </div>
+                        <div class="period">Depuis 2023</div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Enseignement pluridisciplinaire en écoles de commerce auprès d'étudiants de niveau Bac+3 à Bac+5 (80h/mois).</p>
+                        <ul>
+                            <li><strong>Entrepreneuriat & Management :</strong> Création d'entreprise, management d'équipe et leadership, Start'up Challenge (coaching finance toutes filières)</li>
+                            <li><strong>Finance & Communication financière :</strong> Communication financière, rapport d'analyse financière</li>
+                            <li><strong>Intelligence Artificielle :</strong> IA en milieu professionnel, enjeux éthiques de l'IA, RGPD et protection des données</li>
+                            <li><strong>Marketing & Éthique :</strong> Marketing digital, éthique professionnelle dans la collecte de data</li>
+                            <li><strong>Immobilier :</strong> Financement immobilier, fiscalité immobilière, droit des successions (filière immobilière), éthique professionnelle immobilière</li>
+                            <li><strong>Finance :</strong> Financement professionnel</li>
+                            <li><strong>Commerce International</strong></li>
+                            <li><strong>Accompagnement académique :</strong> Correction de mémoires de recherche et mémoires professionnels (Master Management des Organisations, Master Manager d'Affaires)</li>
+                            <li><strong>Responsabilités jury :</strong> Membre de jury d'examen, nommé Président de Jury à 4 reprises pour soutenances de mémoires Bac+5 (recherche et professionnels)</li>
+                            <li><strong>Engagement bénévole :</strong> Cours de soutien groupés pour étudiants en difficulté et préparation aux épreuves de rattrapage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Fondateur & Gérant</div>
+                            <div class="company">Organisme de Formation Certifié Qualiopi</div>
+                        </div>
+                        <div class="period">Depuis 2023</div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Création et certification Qualiopi en solo d'un organisme de formation spécialisé dans la formation de formateurs.</p>
+                        <ul>
+                            <li>Conception de programmes de formation professionnelle</li>
+                            <li>Obtention de la certification Qualiopi (Référentiel National Qualité)</li>
+                            <li>Développement de l'offre formation certifiante au catalogue CPF</li>
+                            <li>Partenariat stratégique avec Webmarketing & Co'm (intégration RS6977)</li>
+                            <li>Construction d'un écosystème de formateurs sous-traitants</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Formateur Bénévole</div>
+                            <div class="company">Lycée Professionnel - BTS Banque</div>
+                        </div>
+                        <div class="period">2022 - 2023</div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Engagement bénévole d'une année complète pour la transmission de compétences bancaires et financières auprès d'étudiants en BTS.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Dirigeant & Co-fondateur</div>
+                            <div class="company">Réseau d'Agences de Courtage en Financement Professionnel (Franchise Meilleurtaux)</div>
+                        </div>
+                        <div class="period">2019 - 2023</div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Création et développement d'un réseau de 4 agences de courtage spécialisé dans le financement de clients professionnels en Normandie.</p>
+                        <ul>
+                            <li>Plus de 15 millions d'euros d'encours de financement professionnel obtenus pour les clients</li>
+                            <li>Levée de fonds : 140 000 € obtenus pour travaux et droits d'entrée franchise</li>
+                            <li>Ouverture successive de 4 agences : Pont-Audemer (2019), Bernay (2020), Lisieux (2021), Honfleur (2022)</li>
+                            <li>Management de 10 collaborateurs sur multi-sites</li>
+                            <li>Montage juridique complexe : création SAS, holding, rachat de parts sociales</li>
+                            <li>Pilotage commercial, financier et opérationnel</li>
+                            <li>Gestion de la liquidation judiciaire en 2023 et accompagnement des équipes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Chargé de Clientèle Professionnelle</div>
+                            <div class="company">Caisse d'Épargne Normandie</div>
+                        </div>
+                        <div class="period">2011 - 2019</div>
+                    </div>
+                    <div class="experience-description">
+                        <p>Évolution progressive de guichetier (CDD 1 mois, 2011) à chargé de clientèle professionnelle au Havre (2017).</p>
+                        <ul>
+                            <li>Gestion portefeuille clients professionnels (TPE, PME, professions libérales)</li>
+                            <li>Montage de dossiers de financement professionnels et immobiliers</li>
+                            <li>Négociation bancaire et relation établissements financiers</li>
+                            <li>Clientèle internationale (anglo-saxons en zone portuaire du Havre)</li>
+                            <li>Financement de projets clients londoniens, australiens et new-yorkais (Bloomberg)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Education & Certifications -->
+            <section class="section">
+                <h2 class="section-title">Formation & Certifications</h2>
+
+                <div class="education-item">
+                    <h3>Certification Intelligence Artificielle</h3>
+                    <div class="institution">IBM</div>
+                    <div class="date">2025</div>
+                </div>
+                
+                <div class="education-item">
+                    <h3>Certification Google Analytics</h3>
+                    <div class="institution">Google</div>
+                    <div class="date">2025</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Certification Fondamentaux de la Gestion de Projet</h3>
+                    <div class="institution">Google</div>
+                    <div class="date">2025</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Certification Gestion de Projet Agile</h3>
+                    <div class="institution">Google</div>
+                    <div class="date">2025</div>
+                </div>
+                
+                <div class="education-item">
+                    <h3>Certification Qualiopi</h3>
+                    <div class="institution">Référentiel National Qualité - Organisme de Formation</div>
+                    <div class="date">2023</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Certification Stratégie d'Entreprise</h3>
+                    <div class="institution">HEC Paris (Programme 8 mois)</div>
+                    <div class="date">2023</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Certification Langue des Signes Française (LSF)</h3>
+                    <div class="institution">Formation certifiante - Engagement pour l'inclusion</div>
+                    <div class="date">2022</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Certification AMF (Autorité des Marchés Financiers)</h3>
+                    <div class="institution">Caisse d'Épargne Normandie - Certification interne</div>
+                    <div class="date">2014</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Formation Professionnelle Continue</h3>
+                    <div class="institution">Neurosciences cognitives et pédagogie (Coursera - UC San Diego, Johns Hopkins)</div>
+                    <div class="date">En cours</div>
+                </div>
+
+            </section>
+
+            <!-- Skills -->
+            <section class="section">
+                <h2 class="section-title">Compétences</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <h3>Pédagogie & Formation</h3>
+                        <ul>
+                            <li>Ingénierie pédagogique</li>
+                            <li>Neuropédagogie appliquée</li>
+                            <li>Animation de formations</li>
+                            <li>Conception de programmes</li>
+                            <li>Correction de mémoires</li>
+                            <li>Président de jury (4 fois)</li>
+                            <li>Certification Qualiopi</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Intelligence Artificielle & Data</h3>
+                        <ul>
+                            <li>IA en milieu professionnel</li>
+                            <li>Enjeux éthiques de l'IA</li>
+                            <li>RGPD et protection données</li>
+                            <li>Éthique collecte de data</li>
+                            <li>Certification IBM IA</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Entrepreneuriat</h3>
+                        <ul>
+                            <li>Création d'entreprise</li>
+                            <li>Business plan</li>
+                            <li>Levée de fonds</li>
+                            <li>Stratégie d'entreprise</li>
+                            <li>Développement commercial</li>
+                            <li>Gestion de crise</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Management</h3>
+                        <ul>
+                            <li>Leadership d'équipe</li>
+                            <li>Management multi-sites</li>
+                            <li>Recrutement & évaluation</li>
+                            <li>Conduite du changement</li>
+                            <li>Intelligence émotionnelle</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Finance & Gestion</h3>
+                        <ul>
+                            <li>Financement professionnel</li>
+                            <li>Communication financière</li>
+                            <li>Rapport d'analyse financière</li>
+                            <li>Coaching finance (Start'up Challenge)</li>
+                            <li>Analyse financière</li>
+                            <li>Gestion budgétaire</li>
+                            <li>Pilotage financier</li>
+                            <li>Montage de dossiers</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Immobilier</h3>
+                        <ul>
+                            <li>Financement immobilier</li>
+                            <li>Fiscalité immobilière</li>
+                            <li>Droit des successions</li>
+                            <li>Éthique professionnelle immobilière</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Marketing & Communication</h3>
+                        <ul>
+                            <li>Marketing digital</li>
+                            <li>Google Analytics (certifié)</li>
+                            <li>Stratégie LinkedIn (6000+ abonnés)</li>
+                            <li>Storytelling</li>
+                            <li>Personal branding</li>
+                            <li>Communication digitale</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Juridique</h3>
+                        <ul>
+                            <li>Droit des sociétés</li>
+                            <li>Droit de la formation</li>
+                            <li>Droit des successions</li>
+                            <li>RGPD</li>
+                            <li>Contrats commerciaux</li>
+                            <li>Réglementation CPF</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Commerce International</h3>
+                        <ul>
+                            <li>Enseignement commerce international</li>
+                            <li>Clients internationaux (UK, USA, Australie)</li>
+                            <li>Négociation interculturelle</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section class="section">
+                <h2 class="section-title">Langues</h2>
+                <div class="language-item">
+                    <span class="language-name">Français</span>
+                    <span class="language-level">Langue maternelle</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Anglais</span>
+                    <span class="language-level">Professionnel - Expérience clients internationaux (UK, USA, Australie)</span>
+                </div>
+                <div class="language-item">
+                    <span class="language-name">Langue des Signes Française (LSF)</span>
+                    <span class="language-level">Certifié - Dispensation de formations</span>
+                </div>
+            </section>
+
+            <!-- Additional Info -->
+            <section class="section">
+                <h2 class="section-title">Informations Complémentaires</h2>
+                <div class="education-item">
+                    <h3>Ceinture Noire Taekwondo (1er Dan)</h3>
+                    <div class="institution">10+ années de pratique assidue</div>
+                    <div class="date">En cours d'obtention - 2025</div>
+                    <p style="margin-top: 10px; color: #555;">Discipline, persévérance, gestion du stress, leadership - Compétences transversales directement applicables au management et à l'entrepreneuriat.</p>
+                </div>
+
+                <div class="profile" style="margin-top: 20px; background: #f8f9fa; padding: 15px; border-radius: 5px;">
+                    <strong>Engagement social et pédagogique :</strong>
+                    <ul style="margin-top: 10px; margin-left: 20px; color: #555;">
+                        <li>Bénévolat en formation professionnelle (BTS Banque, 2022-2023)</li>
+                        <li>Cours de soutien groupés bénévoles pour étudiants en difficulté (préparation rattrapages)</li>
+                        <li>Certification LSF pour l'inclusion des personnes sourdes et malentendantes</li>
+                        <li>Accompagnement de publics diversifiés et promotion de l'égalité des chances</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
